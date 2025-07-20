@@ -7,7 +7,7 @@ tiktoken
 autogen-ext[http-tool]
 autogen-ext[openai]
 autogen-ext
-langchain-community
+langchain_community
 langchain
 docker
 asyncio
