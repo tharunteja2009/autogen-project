@@ -17,14 +17,18 @@ async def main():
     team = getSoftwareDevelopmentTeam(docker, openai_model_client)
 
     try:
-        task = "check two numbers are polyndromic or not"
+        task = input(
+            "Enter the program which you like to execute by multi-agent workflow: "
+        )
 
         await start_docker_container(docker)
 
         async for message in team.run_stream(task=task):
             if isinstance(message, TextMessage):
-                print(f"message.source: {message.source}")
-                print(f"message.content: {message.content}")
+                print(
+                    f"message.source: {message.source} ----> message.content: {message.content}"
+                )
+                print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
     except Exception as e:
         print(e)
