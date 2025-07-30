@@ -12,3 +12,5 @@ langchain
 docker
 asyncio
 autogen-ext[docker]
+tiktoken
+streamlit

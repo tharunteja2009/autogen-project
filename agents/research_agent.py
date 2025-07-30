@@ -18,7 +18,7 @@ def web_search_tool(query: str) -> str:
 def do_research():
     agent = AssistantAgent(
         name="web_search_agent",
-        description="An agent that performs web searches to answer questions.",
+        description="An agent that performs web searches to answer questions in 30 words or less.",
         model_client=open_ai_client.get_model_client(),
         system_message="You are a research agent that can search the web to find information. Use the web search tool to answer questions. in 100 words",
         tools=[web_search_tool],
