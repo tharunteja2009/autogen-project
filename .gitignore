@@ -4,3 +4,4 @@ agents/__pycache__/*
 .env
 teams/__pycache__/software_development_team.cpython-310.pyc
 temp/*
+__pycache__/*

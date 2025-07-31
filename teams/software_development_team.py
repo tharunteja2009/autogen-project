@@ -3,6 +3,7 @@ from autogen_agentchat.conditions import TextMentionTermination
 from agents.code_executor_agent import getCodeExecutorAgent
 from agents.code_generating_agent import code_generator_agent
 from agents.user_agent import get_user_proxy_agent
+from config.constants import MAX_TURNS as cons
 
 
 def getSoftwareDevelopmentTeam(docker, model_client):
@@ -17,7 +18,7 @@ def getSoftwareDevelopmentTeam(docker, model_client):
 
     team = RoundRobinGroupChat(
         participants=[generator_agent, executor_agent, user_proxy_agent],
-        max_turns=6,
+        max_turns=cons,
         termination_condition=stop_termination | approve_termination,
     )
     return team
