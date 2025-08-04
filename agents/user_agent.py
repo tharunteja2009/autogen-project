@@ -22,8 +22,4 @@ You are a User Proxy Agent in a multi-agent workflow. Your responsibilities are:
 3. Once you are fully satisfied with the code and the result, respond with the message: APPROVE
 4. Only respond when it is your turn in the team cycle.
 """
-
-    # Set human_input_mode after initialization if applicable
-    user_proxy_agent.human_input_mode = "ALWAYS"
-
     return user_proxy_agent

@@ -1,6 +1,5 @@
 import streamlit as st
 import asyncio
-import os
 
 from teams.software_development_team import getSoftwareDevelopmentTeam
 from models.open_ai_client import get_model_client
@@ -74,5 +73,3 @@ if task:
     )
     if error:
         st.error(f"An error occured: {error}")
-else:
-    st.warning("Please provide the program to execute by multi-agent workflow.")
